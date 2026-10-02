@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AV Trading | IT & Security Solutions</title>
+
+    <meta name="description"
+        content="AV Trading provides IT equipment, CCTV, networking, servers, security systems and fiber optic solutions in Bhutan.">
+
+    <style>
+
+        /* =========================
+           GLOBAL SETTINGS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            line-height: 1.6;
+            background: #f7f9fc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .topbar {
+            background: #071a35;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0757a0;
+        }
+
+        .logo span {
+            color: #111;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0757a0;
+        }
+
+        .nav-button {
+            background: #0757a0;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(5, 30, 65, 0.88),
+                    rgba(5, 30, 65, 0.88)
+                ),
+                url("https://cdn.pixabay.com/photo/2017/04/07/17/55/bhutan-2211514_1280.jpg")
+                center/cover;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #45b3ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #e4edf7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #0878d1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #055a9d;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #071a35;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #071a35;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            color: #071a35;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #0878d1;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================== */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            color: #071a35;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services-section {
+            background: #071a35;
+            color: white;
+        }
+
+        .services-section .section-title h2 {
+            color: white;
+        }
+
+        .services-section .section-title p {
+            color: #c7d4e4;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service {
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .service h3 {
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #c7d4e4;
+        }
+
+
+        /* =========================
+           BRANDS
+        ========================== */
+
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .brand {
+            background: white;
+            padding: 25px 40px;
+            border-radius: 7px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-section {
+            background: white;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 36px;
+            color: #071a35;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #0757a0;
+            margin-bottom: 4px;
+        }
+
+        form {
+            background: #f7f9fc;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #050f20;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer li {
+            color: #b7c4d5;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #8fa1b7;
+        }
+
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================== */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 12px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .topbar-content {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .navbar {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <span>IT & Security Solutions in Bhutan</span>
+
+            <span>
+                📞 +975 17372658
+                &nbsp; | &nbsp;
+                ✉ dkavtrading@gmail.com
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <div class="logo">
+                AV <span>TRADING</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#brands">Brands</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-button">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <h1>
+                    Technology Solutions
+                    <span>You Can Trust</span>
+                </h1>
+
+                <p>
+                    Professional IT infrastructure, CCTV,
+                    networking, server, security and optical
+                    fiber solutions for businesses and organizations.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#products" class="btn btn-primary">
+                        Explore Products
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+
+        <div class="container about">
+
+            <div class="about-image">
+
+                <img
+                    src="C:\Users\DK Sharma\Desktop\WEBSITE\Images\WhatsApp Image 2026-09-24 at 3.07.38 PM.jpeg"
+                    alt="Business meeting">
+
+            </div>
+
+
+            <div class="about-text" id="about">
+
+                <h2>
+                    About AV Trading
+                </h2>
+
+                <p>
+                    AV Trading is a technology-focused company
+                    providing IT and security solutions for
+                    businesses, government organizations and
+                    other institutions.
+                </p>
+
+                <p>
+                    We supply and support a wide range of
+                    technology products including CCTV systems,
+                    servers, networking equipment, fiber optic
+                    cables and IT accessories.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>Quality Technology Products</li>
+
+                    <li>Professional Technical Support</li>
+
+                    <li>Installation & Configuration</li>
+
+                    <li>Reliable Supply & After-Sales Support</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section" id="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Products</h2>
+
+                <p>
+                    Complete technology solutions for your organization.
+                </p>
+
+            </div>
+
+
+            <div class="products">
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        📹
+                    </div>
+
+                    <h3>CCTV & Security</h3>
+
+                    <p>
+                        IP cameras, NVRs, DVRs, surveillance
+                        systems and security accessories.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        🖥️
+                    </div>
+
+                    <h3>Servers</h3>
+
+                    <p>
+                        Enterprise servers, storage systems,
+                        server accessories and backup solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        🌐
+                    </div>
+
+                    <h3>Networking</h3>
+
+                    <p>
+                        Switches, routers, wireless systems,
+                        racks and networking accessories.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        🔌
+                    </div>
+
+                    <h3>Fiber Optics</h3>
+
+                    <p>
+                        Fiber optic cables, termination,
+                        accessories and connectivity solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        🔐
+                    </div>
+
+                    <h3>Access Control</h3>
+
+                    <p>
+                        Biometric systems, access control,
+                        attendance and door security solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        ⚡
+                    </div>
+
+                    <h3>UPS & Power</h3>
+
+                    <p>
+                        UPS systems, power backup and
+                        protection solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        💻
+                    </div>
+
+                    <h3>IT Equipment</h3>
+
+                    <p>
+                        Computers, printers, monitors,
+                        accessories and peripherals.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-icon">
+                        🧰
+                    </div>
+
+                    <h3>Accessories</h3>
+
+                    <p>
+                        Cables, connectors, racks and
+                        other IT infrastructure accessories.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section services-section" id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Services</h2>
+
+                <p>
+                    End-to-end technology services and support.
+                </p>
+
+            </div>
+
+
+            <div class="services">
+
+
+                <div class="service">
+
+                    <h3>IT Infrastructure</h3>
+
+                    <p>
+                        Planning, supply and implementation of
+                        IT infrastructure for organizations.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>CCTV Installation</h3>
+
+                    <p>
+                        Professional CCTV installation,
+                        configuration and maintenance.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>Network Installation</h3>
+
+                    <p>
+                        Structured cabling, network installation,
+                        configuration and troubleshooting.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>Server Solutions</h3>
+
+                    <p>
+                        Server supply, installation,
+                        configuration and maintenance.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>Fiber Optic Solutions</h3>
+
+                    <p>
+                        Fiber optic installation,
+                        termination and connectivity solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <h3>Technical Support</h3>
+
+                    <p>
+                        Technical assistance, maintenance and
+                        after-sales support.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BRANDS -->
+
+    <section class="section" id="brands">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Brands We Work With</h2>
+
+                <p>
+                    We source products from established
+                    technology manufacturers and suppliers.
+                </p>
+
+            </div>
+
+
+            <div class="brands">
+
+                <div class="brand">Hikvision</div>
+
+                <div class="brand">Dahua</div>
+
+                <div class="brand">TP-Link</div>
+
+                <div class="brand">HP</div>
+
+                <div class="brand">Dell</div>
+
+                <div class="brand">Cisco</div>
+
+                <div class="brand">Ubiquiti</div>
+
+                <div class="brand">APC</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section contact-section" id="contact">
+
+        <div class="container contact">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    Let's Work Together
+                </h2>
+
+                <p>
+                    Contact us for product enquiries,
+                    quotations, project requirements and
+                    technical support.
+                </p>
+
+                <br>
+
+
+                <div class="contact-item">
+
+                    <strong>📍 Address</strong>
+
+                    Bhutan
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📞 Phone</strong>
+
+                    +975 17372658
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📧 Email</strong>
+
+                    dkavtrading.gmail.com
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>💬 WhatsApp</strong>
+
+                    +975 17372658
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form>
+
+                <h3>
+                    Send an Enquiry
+                </h3>
+
+                <br>
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="Phone Number">
+
+                <input
+                    type="text"
+                    placeholder="Subject">
+
+                <textarea
+                    placeholder="Tell us about your requirement..."
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Send Enquiry
+
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+
+            <div>
+
+                <h3>AV TRADING</h3>
+
+                <p>
+                    IT equipment, CCTV, networking,
+                    server, security and fiber optic
+                    solutions in Bhutan.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#products">Products</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Bhutan</p>
+
+                <p>+975 17372658</p>
+
+                <p>dkavtrading123@gmail.com</p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container copyright">
+
+            © 2026 AV Trading. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/97517372658"
+        class="whatsapp"
+        target="_blank"
+        title="Chat on WhatsApp">
+
+        ☎
+
+    </a>
+
+
+</body>
+
+</html>
